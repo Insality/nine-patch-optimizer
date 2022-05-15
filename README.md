@@ -13,14 +13,18 @@ $ pip install Wand
 ```
 
 You can pass folder with images, the output folder will be created nearby with script file
+
 `python3 parse_directory.py ./path_to_image_folder`
 
 You can pass single image and pass the output name (or it will create the same image nearby script file)
+
 `python3 parse_file.py ./path_to_image.png ./path_to_output_image.png`
+
 
 The image output:
 
 ![](/tool-example.png)
+
 
 # Output
 
