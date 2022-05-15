@@ -75,7 +75,7 @@ def optimize(input_path, output_path):
         info_col = image_info["in_col"][0]
         x = info_col["start"]
         cx = x + OFFSET
-        width = info_col["length"]
+        width = info_col["length"] + PATCH_OFFSET
         cwidth = width - OFFSET * 2
 
     if len(image_info["in_row"]) > 0:
@@ -83,7 +83,7 @@ def optimize(input_path, output_path):
         info_row = image_info["in_row"][0]
         y = info_row["start"]
         cy = y + OFFSET
-        height = info_row["length"]
+        height = info_row["length"] + PATCH_OFFSET
         cheight = height - OFFSET * 2
 
     image.chop(x = cx, y = cy, width = cwidth, height = cheight)
@@ -100,8 +100,8 @@ def optimize(input_path, output_path):
         # Save new image && print info
         image.save(filename = output_path)
         nine_patch_info = "[{0}, {1}, {2}, {3}]".format(
-            x + PATCH_OFFSET if x > 0 else 0,
-            y + PATCH_OFFSET if y > 0 else 0,
+            x + PATCH_OFFSET if cx > 0 else 0,
+            y + PATCH_OFFSET if cy > 0 else 0,
             original_width - (x + width) + PATCH_OFFSET if width > 0 else 0,
             original_height - (y + height) + PATCH_OFFSET if height > 0 else 0
         )
