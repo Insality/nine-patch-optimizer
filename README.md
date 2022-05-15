@@ -14,11 +14,11 @@ $ pip install Wand
 
 You can pass folder with images, the output folder will be created nearby with script file
 
-`python3 parse_directory.py ./path_to_image_folder`
+`python parse_directory.py ./path_to_image_folder`
 
 You can pass single image and pass the output name (or it will create the same image nearby script file)
 
-`python3 parse_file.py ./path_to_image.png ./path_to_output_image.png`
+`python parse_file.py ./path_to_image.png ./path_to_output_image.png`
 
 
 The image output:
@@ -35,7 +35,7 @@ Image: button_purple.png Output: button_purple.png Origin Size: 368x128 New Size
 ```
 
 To use image as before, set in the editor nine patch settings:
-`60 (from left) 0 (from  60 (from right) 0 (from bottom)`
+`60 (from left) 0 (from top) 60 (from right) 0 (from bottom)`
 
 And set node size to origin size:
 `Origin Size: 368x128`
